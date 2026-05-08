@@ -1,29 +1,519 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReGadget Market | Μεταχειρισμένα iPhone & Gadgets</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReGadget Market | Μεταχειρισμένα iPhone & Gadgets</title>
+  <meta name="description" content="ReGadget Market - Marketplace για μεταχειρισμένα iPhone, smartphones και gadgets στην Ελλάδα." />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 font-sans">
-    <nav class="bg-white shadow-sm p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-600">ReGadget</h1>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold">Πούλησε Τώρα</button>
+
+<body class="bg-slate-950 text-white font-sans">
+  <!-- HEADER -->
+  <header class="border-b border-white/10 sticky top-0 z-50 bg-slate-950/90 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl bg-blue-500 flex items-center justify-center font-black text-xl">
+          R
         </div>
-    </nav>
-    <main class="max-w-6xl mx-auto mt-10 p-4 text-center">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Βρες το επόμενο iPhone σου στην καλύτερη τιμή.</h2>
-        <p class="text-gray-600 mb-8">Το No1 Marketplace για ασφαλείς αγοραπωλησίες gadgets στην Ελλάδα.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100">
-                <div class="h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400">Φωτογραφία</div>
-                <h3 class="font-bold text-lg">iPhone 13 Pro</h3>
-                <p class="text-blue-600 font-bold text-xl">540€</p>
-                <button class="w-full mt-4 bg-gray-900 text-white py-2 rounded-md">Δες την αγγελία</button>
+        <div>
+          <h1 class="text-xl font-black leading-none">ReGadget</h1>
+          <p class="text-xs text-slate-400">Market</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-300">
+        <a href="#products" class="hover:text-white">Αγγελίες</a>
+        <a href="#risk" class="hover:text-white">Monte Carlo</a>
+        <a href="#sell" class="hover:text-white">Πώληση</a>
+        <a href="#contact" class="hover:text-white">Επικοινωνία</a>
+      </nav>
+
+      <a href="#sell" class="bg-white text-slate-950 px-5 py-3 rounded-2xl font-black">
+        Πούλησε τώρα
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,.35),_transparent_35%),radial-gradient(circle_at_top_right,_rgba(6,182,212,.25),_transparent_35%)]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-2 text-sm text-slate-300 mb-6">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+          Marketplace για iPhone, smartphones & gadgets
+        </div>
+
+        <h2 class="text-4xl md:text-6xl font-black leading-tight">
+          Αγόρασε και πούλησε gadgets με λιγότερο ρίσκο.
+        </h2>
+
+        <p class="mt-6 text-lg text-slate-300 leading-relaxed max-w-xl">
+          Καθαρές αγγελίες, φίλτρα, κατάσταση συσκευής, μπαταρία, περιοχή και εκτίμηση ρίσκου με Monte Carlo.
+          Γιατί το “φαίνεται καλό από τη φωτογραφία” είναι οικονομική στρατηγική επιπέδου καφενείου.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#products" class="bg-blue-600 hover:bg-blue-500 text-white px-7 py-4 rounded-2xl font-black text-center">
+            Δες αγγελίες
+          </a>
+          <a href="#risk" class="bg-white/10 hover:bg-white/15 border border-white/10 px-7 py-4 rounded-2xl font-black text-center">
+            Τρέξε Monte Carlo
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white text-slate-950 rounded-[2rem] p-6 shadow-2xl">
+        <div class="flex justify-between items-start mb-5">
+          <div>
+            <p class="text-sm text-slate-500">Προτεινόμενη αγγελία</p>
+            <h3 class="text-3xl font-black">iPhone 14 Pro</h3>
+          </div>
+          <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-black text-sm">
+            Άριστο
+          </span>
+        </div>
+
+        <div class="h-72 rounded-3xl bg-gradient-to-br from-slate-900 via-blue-700 to-cyan-400 flex items-center justify-center mb-5">
+          <div class="w-32 h-60 rounded-[2rem] bg-slate-950 border-4 border-slate-700 relative shadow-2xl">
+            <div class="absolute top-3 left-1/2 -translate-x-1/2 w-14 h-5 bg-black rounded-full"></div>
+            <div class="absolute inset-5 top-12 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-200"></div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 text-center">
+          <div class="bg-slate-100 rounded-2xl p-3">
+            <p class="text-xs text-slate-500">Μνήμη</p>
+            <p class="font-black">128GB</p>
+          </div>
+          <div class="bg-slate-100 rounded-2xl p-3">
+            <p class="text-xs text-slate-500">Μπαταρία</p>
+            <p class="font-black">91%</p>
+          </div>
+          <div class="bg-slate-100 rounded-2xl p-3">
+            <p class="text-xs text-slate-500">Τιμή</p>
+            <p class="font-black">679€</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <main class="bg-slate-50 text-slate-950">
+    <section id="products" class="max-w-7xl mx-auto px-5 py-16">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+        <div>
+          <p class="text-blue-600 font-black uppercase tracking-widest text-sm">Αγγελίες</p>
+          <h2 class="text-4xl md:text-5xl font-black mt-2">Δημοφιλείς συσκευές</h2>
+          <p class="text-slate-600 mt-4 max-w-2xl">
+            Κάρτες προϊόντων με βασικά στοιχεία και υπολογισμό ρίσκου. Όχι απλώς “βάλαμε 3 κουτιά και το είπαμε marketplace”.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <button class="filter-btn bg-slate-950 text-white px-4 py-2 rounded-full font-bold" data-filter="all">Όλα</button>
+          <button class="filter-btn bg-white border border-slate-200 px-4 py-2 rounded-full font-bold" data-filter="iPhone">iPhone</button>
+          <button class="filter-btn bg-white border border-slate-200 px-4 py-2 rounded-full font-bold" data-filter="Samsung">Samsung</button>
+          <button class="filter-btn bg-white border border-slate-200 px-4 py-2 rounded-full font-bold" data-filter="Audio">Audio</button>
+        </div>
+      </div>
+
+      <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- MONTE CARLO -->
+    <section id="risk" class="max-w-7xl mx-auto px-5 py-16">
+      <div class="rounded-[2rem] bg-slate-950 text-white p-8 md:p-12">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p class="text-cyan-300 font-black uppercase tracking-widest text-sm">Monte Carlo Engine</p>
+            <h2 class="text-3xl md:text-5xl font-black mt-2">
+              1.000.000 προσομοιώσεις για εκτίμηση ευκαιρίας.
+            </h2>
+            <p class="text-slate-300 mt-5 leading-relaxed">
+              Το μοντέλο συγκρίνει τιμή, κατάσταση, μπαταρία, πιθανό κόστος επισκευής, εγγύηση και ρίσκο αγοράς.
+              Δεν είναι μαντείο. Είναι καλύτερο από το να αποφασίζεις επειδή “ο πωλητής φάνηκε καλό παιδί”.
+            </p>
+
+            <button id="runMonteCarlo" class="mt-7 bg-blue-600 hover:bg-blue-500 text-white px-7 py-4 rounded-2xl font-black">
+              Τρέξε Monte Carlo
+            </button>
+
+            <p id="mcStatus" class="mt-4 text-sm text-slate-400">
+              Έτοιμο για προσομοίωση.
+            </p>
+          </div>
+
+          <div class="bg-white/10 border border-white/10 rounded-3xl p-6">
+            <h3 class="text-xl font-black mb-4">Τελική κατάταξη</h3>
+            <div id="mcResults" class="space-y-4">
+              <p class="text-slate-400">Πάτα το κουμπί για να βγουν ποσοστά επιτυχίας και κινδύνου.</p>
             </div>
+          </div>
         </div>
-    </main>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="max-w-7xl mx-auto px-5 py-16">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-1">
+          <p class="text-blue-600 font-black uppercase tracking-widest text-sm">Δομή Marketplace</p>
+          <h2 class="text-4xl font-black mt-2">Πώς δουλεύει</h2>
+        </div>
+
+        <div class="lg:col-span-2 grid md:grid-cols-3 gap-5">
+          <div class="bg-white rounded-3xl p-6 border border-slate-200">
+            <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black mb-5">1</div>
+            <h3 class="font-black text-xl">Ανεβάζεις συσκευή</h3>
+            <p class="text-slate-600 mt-3">Μοντέλο, τιμή, κατάσταση, μπαταρία, περιοχή.</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border border-slate-200">
+            <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black mb-5">2</div>
+            <h3 class="font-black text-xl">Υπολογίζεται ρίσκο</h3>
+            <p class="text-slate-600 mt-3">Το Monte Carlo βγάζει πιθανότητα καλής αγοράς.</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border border-slate-200">
+            <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black mb-5">3</div>
+            <h3 class="font-black text-xl">Γίνεται επαφή</h3>
+            <p class="text-slate-600 mt-3">Ο αγοραστής βλέπει καθαρά στοιχεία και αποφασίζει.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELL FORM -->
+    <section id="sell" class="max-w-7xl mx-auto px-5 py-16 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-blue-600 font-black uppercase tracking-widest text-sm">Πώληση</p>
+        <h2 class="text-4xl md:text-5xl font-black mt-2">Πούλησε τη συσκευή σου</h2>
+        <p class="text-slate-600 mt-5 leading-relaxed">
+          Η φόρμα είναι demo. Στο επόμενο βήμα μπορεί να συνδεθεί με email, Formspree, Google Forms ή backend.
+        </p>
+      </div>
+
+      <form class="bg-white rounded-[2rem] p-6 md:p-8 border border-slate-200 shadow-sm">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label>
+            <span class="text-sm font-bold text-slate-700">Μοντέλο</span>
+            <input class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="π.χ. iPhone 13 Pro">
+          </label>
+
+          <label>
+            <span class="text-sm font-bold text-slate-700">Τιμή</span>
+            <input class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="π.χ. 540€">
+          </label>
+
+          <label>
+            <span class="text-sm font-bold text-slate-700">Μπαταρία</span>
+            <input class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="π.χ. 88%">
+          </label>
+
+          <label>
+            <span class="text-sm font-bold text-slate-700">Περιοχή</span>
+            <input class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="π.χ. Θεσσαλονίκη">
+          </label>
+        </div>
+
+        <label class="block mt-4">
+          <span class="text-sm font-bold text-slate-700">Περιγραφή</span>
+          <textarea rows="4" class="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Κατάσταση, κουτί, απόδειξη, εγγύηση κτλ."></textarea>
+        </label>
+
+        <button type="button" class="mt-5 w-full bg-blue-600 hover:bg-blue-500 text-white rounded-2xl px-6 py-4 font-black">
+          Προεπισκόπηση αγγελίας
+        </button>
+      </form>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-7xl mx-auto px-5 pb-20">
+      <div class="rounded-[2rem] bg-blue-600 text-white p-8 md:p-12 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-black">ReGadget Market</h2>
+          <p class="text-blue-100 mt-3">Marketplace δομή + Monte Carlo risk scoring για αγγελίες συσκευών.</p>
+        </div>
+
+        <a href="mailto:kapsgio10@gmail.com" class="bg-white text-blue-700 px-7 py-4 rounded-2xl font-black text-center">
+          Επικοινωνία
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 px-5 py-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-4 text-sm">
+      <p>© 2026 ReGadget Market</p>
+      <p>Built with Tailwind CSS + Monte Carlo simulation.</p>
+    </div>
+  </footer>
+
+  <script>
+    const products = [
+      {
+        id: 1,
+        category: "iPhone",
+        title: "iPhone 13 Pro",
+        specs: "128GB • Πολύ καλή κατάσταση",
+        price: 540,
+        fairValue: 585,
+        battery: 88,
+        warranty: 0,
+        repairRisk: 0.16,
+        location: "Θεσσαλονίκη",
+        gradient: "from-slate-900 to-blue-500"
+      },
+      {
+        id: 2,
+        category: "iPhone",
+        title: "iPhone 14 Pro",
+        specs: "128GB • Άριστο",
+        price: 679,
+        fairValue: 735,
+        battery: 91,
+        warranty: 1,
+        repairRisk: 0.11,
+        location: "Αθήνα",
+        gradient: "from-blue-800 to-cyan-400"
+      },
+      {
+        id: 3,
+        category: "Samsung",
+        title: "Samsung Galaxy S23",
+        specs: "256GB • Άριστο",
+        price: 490,
+        fairValue: 540,
+        battery: 94,
+        warranty: 1,
+        repairRisk: 0.10,
+        location: "Πάτρα",
+        gradient: "from-purple-700 to-pink-400"
+      },
+      {
+        id: 4,
+        category: "Audio",
+        title: "AirPods Pro 2",
+        specs: "USB-C • Σαν καινούργια",
+        price: 155,
+        fairValue: 185,
+        battery: 90,
+        warranty: 0,
+        repairRisk: 0.18,
+        location: "Λάρισα",
+        gradient: "from-cyan-500 to-emerald-400"
+      },
+      {
+        id: 5,
+        category: "iPhone",
+        title: "iPhone 12",
+        specs: "64GB • Καλή κατάσταση",
+        price: 270,
+        fairValue: 310,
+        battery: 82,
+        warranty: 0,
+        repairRisk: 0.23,
+        location: "Θεσσαλονίκη",
+        gradient: "from-slate-700 to-slate-400"
+      },
+      {
+        id: 6,
+        category: "Samsung",
+        title: "Samsung Galaxy Z Flip 5",
+        specs: "256GB • Πολύ καλή κατάσταση",
+        price: 620,
+        fairValue: 680,
+        battery: 89,
+        warranty: 1,
+        repairRisk: 0.20,
+        location: "Αθήνα",
+        gradient: "from-indigo-700 to-fuchsia-400"
+      }
+    ];
+
+    const productGrid = document.getElementById("productGrid");
+
+    function renderProducts(filter = "all") {
+      productGrid.innerHTML = "";
+
+      products
+        .filter(product => filter === "all" || product.category === filter)
+        .forEach(product => {
+          const card = document.createElement("article");
+          card.className = "bg-white rounded-3xl p-5 shadow-sm border border-slate-200 hover:-translate-y-1 transition";
+          card.innerHTML = `
+            <div class="h-56 rounded-3xl bg-gradient-to-br ${product.gradient} mb-5 flex items-center justify-center text-white font-black text-xl">
+              ${product.title}
+            </div>
+
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <h3 class="text-xl font-black">${product.title}</h3>
+                <p class="text-slate-500 text-sm mt-1">${product.specs}</p>
+              </div>
+              <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-black">
+                ${product.price}€
+              </span>
+            </div>
+
+            <div class="mt-5 grid grid-cols-3 gap-2 text-sm">
+              <div class="bg-slate-100 rounded-2xl p-3">
+                <p class="text-slate-500 text-xs">Μπαταρία</p>
+                <p class="font-black">${product.battery}%</p>
+              </div>
+              <div class="bg-slate-100 rounded-2xl p-3">
+                <p class="text-slate-500 text-xs">Περιοχή</p>
+                <p class="font-black">${product.location}</p>
+              </div>
+              <div class="bg-slate-100 rounded-2xl p-3">
+                <p class="text-slate-500 text-xs">Εγγύηση</p>
+                <p class="font-black">${product.warranty ? "Ναι" : "Όχι"}</p>
+              </div>
+            </div>
+
+            <div id="score-${product.id}" class="mt-5 rounded-2xl bg-slate-950 text-white p-4">
+              <p class="text-sm text-slate-400">Monte Carlo score</p>
+              <p class="font-black text-lg">Δεν έχει τρέξει ακόμα</p>
+            </div>
+          `;
+
+          productGrid.appendChild(card);
+        });
+    }
+
+    renderProducts();
+
+    document.querySelectorAll(".filter-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(btn => {
+          btn.className = "filter-btn bg-white border border-slate-200 px-4 py-2 rounded-full font-bold";
+        });
+
+        button.className = "filter-btn bg-slate-950 text-white px-4 py-2 rounded-full font-bold";
+        renderProducts(button.dataset.filter);
+      });
+    });
+
+    function normalRandom(mean, stdDev) {
+      let u = 0;
+      let v = 0;
+
+      while (u === 0) u = Math.random();
+      while (v === 0) v = Math.random();
+
+      const num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+      return mean + stdDev * num;
+    }
+
+    async function runMonteCarlo() {
+      const totalRuns = 1000000;
+      const batchSize = 25000;
+      const status = document.getElementById("mcStatus");
+      const resultsBox = document.getElementById("mcResults");
+
+      status.textContent = "Τρέχει Monte Carlo 1.000.000 runs...";
+      resultsBox.innerHTML = "";
+
+      const stats = products.map(product => ({
+        ...product,
+        success: 0,
+        risk: 0,
+        expectedValueSum: 0
+      }));
+
+      let completed = 0;
+
+      while (completed < totalRuns) {
+        const currentBatch = Math.min(batchSize, totalRuns - completed);
+
+        for (let i = 0; i < currentBatch; i++) {
+          stats.forEach(product => {
+            const simulatedMarketValue = normalRandom(product.fairValue, product.fairValue * 0.08);
+            const simulatedBatteryPenalty = Math.max(0, 90 - normalRandom(product.battery, 4)) * 4.5;
+            const simulatedRepairCost = Math.random() < product.repairRisk
+              ? normalRandom(95, 35)
+              : 0;
+            const warrantyBonus = product.warranty ? normalRandom(35, 10) : 0;
+            const hiddenRiskPenalty = normalRandom(20, 15);
+
+            const finalValue =
+              simulatedMarketValue
+              - simulatedBatteryPenalty
+              - simulatedRepairCost
+              + warrantyBonus
+              - hiddenRiskPenalty;
+
+            const edge = finalValue - product.price;
+            product.expectedValueSum += edge;
+
+            if (edge > 25) {
+              product.success++;
+            } else {
+              product.risk++;
+            }
+          });
+        }
+
+        completed += currentBatch;
+        status.textContent = `Τρέχει Monte Carlo: ${completed.toLocaleString("el-GR")} / ${totalRuns.toLocaleString("el-GR")} runs`;
+
+        await new Promise(resolve => setTimeout(resolve, 0));
+      }
+
+      const ranked = stats
+        .map(product => {
+          const successRate = (product.success / totalRuns) * 100;
+          const riskRate = (product.risk / totalRuns) * 100;
+          const expectedValue = product.expectedValueSum / totalRuns;
+
+          return {
+            ...product,
+            successRate,
+            riskRate,
+            expectedValue
+          };
+        })
+        .sort((a, b) => b.successRate - a.successRate);
+
+      resultsBox.innerHTML = ranked.map((product, index) => `
+        <div class="bg-white/10 border border-white/10 rounded-2xl p-4">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <p class="text-sm text-slate-400">#${index + 1}</p>
+              <h4 class="font-black">${product.title}</h4>
+              <p class="text-sm text-slate-300">Expected value: ${product.expectedValue.toFixed(2)}€</p>
+            </div>
+            <div class="text-right">
+              <p class="text-emerald-300 font-black">${product.successRate.toFixed(1)}% επιτυχία</p>
+              <p class="text-red-300 font-black">${product.riskRate.toFixed(1)}% ρίσκο</p>
+            </div>
+          </div>
+
+          <div class="mt-3 h-3 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full bg-emerald-400" style="width:${product.successRate}%"></div>
+          </div>
+        </div>
+      `).join("");
+
+      ranked.forEach(product => {
+        const scoreBox = document.getElementById(`score-${product.id}`);
+        if (!scoreBox) return;
+
+        scoreBox.innerHTML = `
+          <p class="text-sm text-slate-400">Monte Carlo score</p>
+          <p class="font-black text-lg">${product.successRate.toFixed(1)}% επιτυχία</p>
+          <p class="text-sm text-slate-300">${product.riskRate.toFixed(1)}% ρίσκο • EV ${product.expectedValue.toFixed(2)}€</p>
+        `;
+      });
+
+      status.textContent = "Ολοκληρώθηκε: 1.000.000 runs.";
+    }
+
+    document.getElementById("runMonteCarlo").addEventListener("click", runMonteCarlo);
+  </script>
 </body>
 </html>

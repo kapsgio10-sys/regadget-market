@@ -1,0 +1,1 @@
+User-agent: *\nAllow: /\nSitemap: https://regadget-market.vercel.app/sitemap.xml\n
